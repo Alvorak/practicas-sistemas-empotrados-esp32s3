@@ -1,0 +1,28 @@
+# Configuracion inicial comun. Si sdkconfig ya existe, sus valores mandan:
+# cambiar este archivo no sustituye una configuracion guardada previamente.
+CONFIG_IDF_TARGET="esp32s3"
+CONFIG_FREERTOS_HZ=1000
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_80=y
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ=80
+
+# Consola por UART0, a traves del conector USB-UART de la placa.
+CONFIG_ESP_CONSOLE_UART_DEFAULT=y
+CONFIG_ESP_CONSOLE_SECONDARY_NONE=y
+CONFIG_ESP_CONSOLE_UART_BAUDRATE=115200
+
+# Ajuste conservador: los ejemplos caben en 4 MB y no necesitan PSRAM.
+# Si tu modulo es N16R8, puedes seleccionar 16 MB en menuconfig.
+CONFIG_ESPTOOLPY_FLASHSIZE_4MB=y
+# No se incluye el componente PSRAM: estos ejercicios no lo necesitan.
+CONFIG_COMPILER_OPTIMIZATION_DEBUG=y
+
+# Activo para la practica 3.4.1. La practica 2 explica como deshabilitarlo
+# y como restaurarlo despues. El watchdog de interrupciones sigue activo.
+CONFIG_ESP_TASK_WDT_EN=y
+CONFIG_ESP_TASK_WDT_INIT=y
+CONFIG_ESP_TASK_WDT_TIMEOUT_S=6
+CONFIG_ESP_TASK_WDT_PANIC=y
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU0=y
+CONFIG_ESP_TASK_WDT_CHECK_IDLE_TASK_CPU1=y
+CONFIG_ESP_INT_WDT=y
+CONFIG_ESP_SYSTEM_PANIC_PRINT_REBOOT=y

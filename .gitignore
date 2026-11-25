@@ -1,0 +1,18 @@
+# Generados por ESP-IDF / CMake. El material de estudio SI se versiona.
+build/
+build_*/
+managed_components/
+sdkconfig
+sdkconfig.old
+sdkconfig.p2
+sdkconfig.p2.old
+# El manifest fija led_strip. El lock se generara en el primer build;
+# puedes quitar esta linea y versionarlo en tu nuevo repositorio.
+dependencies.lock
+
+# Archivos personales y temporales.
+*.bak
+*.log
+__pycache__/
+.DS_Store
+Thumbs.db

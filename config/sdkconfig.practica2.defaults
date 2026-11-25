@@ -1,0 +1,8 @@
+# Perfil opcional para reproducir los ajustes iniciales de la practica 2.
+# El PDF pide deshabilitar "el watchdog" sin especificar cual.
+# Aqui se interpreta como TWDT (tareas). No se desactiva IWDT.
+CONFIG_FREERTOS_HZ=1000
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ_80=y
+CONFIG_ESP_DEFAULT_CPU_FREQ_MHZ=80
+# CONFIG_ESP_TASK_WDT_EN is not set
+CONFIG_ESP_INT_WDT=y

@@ -1,0 +1,6 @@
+dependencies:
+  # Los drivers separados esp_driver_* se usan desde ESP-IDF 5.3.
+  idf: ">=5.3,<7.0"
+  # Componente oficial utilizado en la practica 3 para WS2812 + RMT.
+  # Se fija la version para conservar la misma API en los ejemplos.
+  espressif/led_strip: "3.0.0"
